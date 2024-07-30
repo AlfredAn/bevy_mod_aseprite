@@ -28,7 +28,9 @@ impl Plugin for AsepritePlugin {
             )
             .add_systems(
                 Update,
-                anim::refresh_animations.in_set(AsepriteSystems::Refresh),
+                anim::refresh_animations
+                    .in_set(AsepriteSystems::Refresh)
+                    .after(AsepriteSystems::Animate),
             );
     }
 }
