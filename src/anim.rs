@@ -7,10 +7,10 @@ use crate::Aseprite;
 
 #[derive(Component, Debug, Default)]
 pub struct AsepriteAnimation {
-    tag: Option<String>,
-    current_frame: usize,
-    current_timer: Timer,
-    forward: bool,
+    pub tag: Option<String>,
+    pub current_frame: usize,
+    pub current_timer: Timer,
+    pub forward: bool,
 }
 
 impl AsepriteAnimation {
