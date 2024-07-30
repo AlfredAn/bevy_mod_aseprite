@@ -175,7 +175,7 @@ fn transition_player(
     match player_state {
         PlayerState::Attack => {
             let remaining_frames = anim.remaining_tag_frames(aseprite.info()).unwrap();
-            let frame_finished = anim.frame_finished(time.delta());
+            let frame_finished = anim.frame_finished(time.delta_seconds());
             if remaining_frames == 0 && frame_finished {
                 ev_player_changed.send(PlayerState::Stand.into());
             }
